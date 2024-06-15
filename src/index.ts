@@ -70,7 +70,7 @@ wss.on('connection', (ws: any) => {
                     }
                 }
             }
-        } else if (decodedObject.event == "listen_change" ||decodedObject.event == "lock_element") {
+        } else if (decodedObject.event == "listen_change" || decodedObject.event == "lock_element" || decodedObject.event == "listen_innertext_change") {
             if(rooms.hasOwnProperty(decodedObject.room_id)){
                 const host = rooms[decodedObject.room_id].host;
                 const clients = rooms[decodedObject.room_id]?.client;
